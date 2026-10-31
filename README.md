@@ -20,7 +20,25 @@ temperature by itself.
 > **Safety.** This software starts and stops a fuel burning appliance without a person next to it. You use it at your own risk:
 > read [docs/safety.md](docs/safety.md) first. The authors are not responsible for damage or injury.
 
+## Screenshots
+
+| | |
+| --- | --- |
+| ![The panel: two controllers, room temperature chart with the periods the heater ran](docs/images/panel-overview.jpg) | ![A heater in smart mode with its target temperature](docs/images/panel-smart-mode.jpg) |
+| ![Analytics: run time, starts, fuel estimate, temperatures](docs/images/analytics-summary.jpg) | ![Analytics: a week of temperature, power level and mode](docs/images/analytics-charts.jpg) |
+| ![The panel on a phone, with the menu open](docs/images/phone-menu.jpg) | ![The installer, with the language choice](docs/images/installer.jpg) |
+
+The screenshots show made-up demo data.
+
+## Wiring
+
+![ESP32-S2 mini, CC1101 and DHT22 wired together](docs/hardware/wiring-photos.svg)
+
+Parts list, pin tables and checks: [docs/hardware](docs/hardware/README.md).
+
 ## How it fits together
+
+![How the parts fit together](docs/hardware/overview.svg)
 
 ```
  heater  <--433 MHz-->  controller (ESP32-S2 + CC1101)  <--HTTPS, every 3 s-->  server (PHP + MySQL)  <--  panel in a browser
@@ -34,12 +52,13 @@ firmware: WiFi, server address and the key are entered once in a setup portal th
 
 1. **Server**: install [`server/`](server/README.md) on any PHP 8.1+ host with MySQL or MariaDB (open the site, the installer
    asks for the language, the database and an admin password). It shows an *enrollment key*.
-2. **Hardware**: wire the CC1101 and optionally a DHT22 to the ESP32-S2 mini, see [docs/firmware.md](docs/firmware.md).
+2. **Hardware**: an ESP32-S2 mini, a 433 MHz CC1101 module and optionally a DHT22: parts and wiring in [docs/hardware](docs/hardware/README.md).
 3. **Firmware**: the easiest way is the builder image, which holds the whole toolchain (only Docker is needed, any system):
    `docker run --rm -v "$PWD":/work piotrtomczyk/hinasto-builder build` makes `firmware/hinasto-fw<N>-PL|EN|DE|CS|SK.bin`.
    Alternatively `tools\publish-firmware.ps1 -NoPublish` (Windows, Arduino CLI) or the Arduino IDE (board *LOLIN S2 Mini*,
    USB CDC On Boot enabled, add `-DHN_LANG_EN` or another language to the compiler flags). Flash one image over USB; after that
-   updates come from the panel. Optional signed updates: [docs/signing.md](docs/signing.md).4. **Pair**: hold BOOT on the controller for 3 s, join the WiFi network `Hinasto-XXXX`, open `192.168.1.111`, enter your WiFi,
+   updates come from the panel. Optional signed updates: [docs/signing.md](docs/signing.md).
+4. **Pair**: hold BOOT on the controller for 3 s, join the WiFi network `Hinasto-XXXX`, open `192.168.1.111`, enter your WiFi,
    the server and the enrollment key, and let it find the remote of your heater (or type its 6-hex-digit address). Approve the
    controller in the panel.
 
@@ -50,7 +69,7 @@ firmware: WiFi, server address and the key are entered once in a setup portal th
 | [`server/`](server/README.md) | PHP panel and API, installer, translations, deploy scripts |
 | [`sniffer/`](docs/firmware.md) | ESP32 firmware (Arduino): radio, heater model, smart mode, cloud client, setup portal, translations |
 | [`tools/`](tools) | `publish-firmware.ps1` (build per language and publish), `builder/` (Docker image with the toolchain), `ota-sign.py` (signing keys and signatures), `smart-sim.cpp` and the tests (`smart-test.cpp`, `sigverify-test.cpp`, `check-lang.py`) |
-| [`docs/`](docs) | radio protocol, firmware notes, safety, raw captures |
+| [`docs/`](docs) | [hardware (parts, wiring)](docs/hardware/README.md), radio protocol, firmware notes, signing, safety, raw captures |
 
 ## Heaters and compatibility
 
@@ -58,6 +77,10 @@ Developed against two heaters of the older "SUN" generation (**V1 protocol**: 43
 generation (V2: 434 MHz, 10 kBaud, CRC) is described by the [DieselHeaterRF](https://github.com/jakkik/DieselHeaterRF) project and is
 not supported by this firmware. If your heater answers to the frames in [docs/protocol.md](docs/protocol.md) it should work; a
 new model is best explored with the `v1 rawpoll` console command first.
+
+**Other heaters are not supported, unfortunately.** If you would like yours to be, and you can send us such a heater (or lend
+it, or help capture its radio frames), we will add support for it. Write to **poczta@piotrtomczyk.com** with the make and model
+and, if you have them, photos of the heater, its remote and the control board.
 
 ## License
 

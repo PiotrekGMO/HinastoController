@@ -2,7 +2,8 @@
 .pio/
 platformio.ini
 src/
-build*/
+/build/
+/build-*/
 
 # release images: attach them to a release instead of committing them
 firmware/*.bin

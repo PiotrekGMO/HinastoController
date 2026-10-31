@@ -1,0 +1,58 @@
+#!/bin/bash
+# Entry point of the Hinasto builder image: builds the firmware in every language, makes signing keys, signs images.
+# The project folder is mounted at /work:
+#   docker run --rm -v "$PWD":/work <user>/hinasto-builder build            all languages
+#   docker run --rm -v "$PWD":/work <user>/hinasto-builder build PL EN      only these
+#   docker run --rm -v "$PWD":/work <user>/hinasto-builder keygen           signing key (keys/) and the public key header
+#   docker run --rm -v "$PWD":/work <user>/hinasto-builder sign firmware/hinasto-fw24-PL.bin
+#   docker run --rm -v "$PWD":/work <user>/hinasto-builder test             host tests (smart mode, signing chain)
+# On Linux add  -u "$(id -u):$(id -g)"  so that the files in firmware/ and keys/ belong to you.
+set -euo pipefail
+WORK=${HINASTO_WORK:-/work}
+TOOLS=/opt/hinasto
+cmd=${1:-help}
+shift || true
+
+case "$cmd" in
+  build)
+    [ -f "$WORK/sniffer/control.h" ] || { echo "no sniffer/control.h in $WORK: mount the project folder with  -v \"\$PWD\":/work" >&2; exit 1; }
+    langs=("$@")
+    [ ${#langs[@]} -gt 0 ] || langs=(PL EN DE CS SK)
+    version=$(grep -oE '#define FW_VERSION [0-9]+' "$WORK/sniffer/control.h" | grep -oE '[0-9]+$')
+    mkdir -p "$WORK/firmware"
+    # the warm cache of the image belongs to root: work on a copy that whoever runs the container can write
+    rm -rf /tmp/build && cp -a /opt/build /tmp/build
+    for lang in "${langs[@]}"; do
+      lang=${lang^^}
+      echo "== building $lang (firmware $version)"
+      rm -rf /tmp/sketch && mkdir -p /tmp/sketch/sniffer
+      cp -r "$WORK/sniffer/." /tmp/sketch/sniffer/
+      echo "#define HN_LANG_$lang" > /tmp/sketch/sniffer/lang_select.h
+      arduino-cli compile --fqbn esp32:esp32:lolin_s2_mini:CDCOnBoot=default --build-path /tmp/build /tmp/sketch/sniffer
+      image="$WORK/firmware/hinasto-fw$version-$lang.bin"
+      cp /tmp/build/sniffer.ino.bin "$image"
+      if [ -f "$WORK/sniffer/signing_key.h" ]; then  # this build only accepts signed updates
+        python3 "$TOOLS/ota-sign.py" sign "$image" --keys "$WORK/keys"
+      fi
+      echo "   $image: $(stat -c %s "$image") bytes"
+    done
+    ;;
+  keygen)
+    python3 "$TOOLS/ota-sign.py" keygen --keys "$WORK/keys" --header "$WORK/sniffer/signing_key.h" "$@"
+    ;;
+  sign)
+    python3 "$TOOLS/ota-sign.py" sign "$@" --keys "$WORK/keys"
+    ;;
+  test)
+    cd "$WORK"
+    g++ -std=c++17 -O2 -Wall tools/smart-test.cpp -o /tmp/smart-test && /tmp/smart-test
+    sh tools/test-signing.sh
+    ;;
+  version)
+    arduino-cli version
+    arduino-cli core list
+    ;;
+  *)
+    sed -n '2,10p' "$0" | sed 's/^# \{0,1\}//'
+    ;;
+esac

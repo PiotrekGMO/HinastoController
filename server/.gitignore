@@ -1,0 +1,8 @@
+dist
+*.log
+# FTPS logins and the installer's config: never commit
+deploy_*.env
+!deploy_*.env.example
+storage/*
+!storage/.htaccess
+!storage/.gitkeep

@@ -1,0 +1,4 @@
+V1 mode 433.892 MHz 2.4 kBaud, listening 40 s. Any char stops.
+  0,1s [77 ms] cmd=B1 sub=20 d1=28 d2=18 rssi=-76.0 lqi=36
+  0,7s [644 ms] cmd=A9 sub=00 d1=00 d2=00 rssi=-59.0 lqi=42
+V1 mode off

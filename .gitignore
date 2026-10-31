@@ -1,0 +1,25 @@
+# build output and local tooling
+.pio/
+platformio.ini
+src/
+build*/
+
+# release images: attach them to a release instead of committing them
+firmware/*.bin
+sniffer-0x0.bin
+
+# personal notes and raw captures with real addresses (sanitised copies are in docs/captures)
+HANDOFF-*.md
+capture-v1-*.txt
+
+# secrets and logins
+deploy_*.env
+!deploy_*.env.example
+**/secrets.h
+
+# signing: the private key must never be committed. The header with the public key belongs to one maker's builds
+keys/
+sniffer/signing_key.h
+
+# private working material: notes, raw captures with real addresses, old experiments, the old PlatformIO project
+prototyping/

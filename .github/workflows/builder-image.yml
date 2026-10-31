@@ -1,0 +1,39 @@
+name: Builder image
+
+# Builds tools/builder/Dockerfile for amd64 and arm64 and pushes it to Docker Hub when a tag "builder-v*" is pushed
+# (or by hand from the Actions tab). Needs two repository secrets: DOCKERHUB_USERNAME and DOCKERHUB_TOKEN
+# (an access token made in Docker Hub, not the password).
+on:
+  push:
+    tags: ['builder-v*']
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Image tag (for example 1.0)'
+        required: true
+
+jobs:
+  push:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: docker/setup-qemu-action@v3
+      - uses: docker/setup-buildx-action@v3
+      - uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - name: Tag
+        id: tag
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then echo "tag=${{ github.event.inputs.tag }}" >> "$GITHUB_OUTPUT";
+          else echo "tag=${GITHUB_REF_NAME#builder-v}" >> "$GITHUB_OUTPUT"; fi
+      - uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: tools/builder/Dockerfile
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: |
+            ${{ secrets.DOCKERHUB_USERNAME }}/hinasto-builder:${{ steps.tag.outputs.tag }}
+            ${{ secrets.DOCKERHUB_USERNAME }}/hinasto-builder:latest

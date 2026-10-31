@@ -1,0 +1,4 @@
+V1 mode 433.892 MHz 2.4 kBaud, listening 90 s. Any char stops.
+ 30,2s hdr=2B12 addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-33.5
+ 30,3s hdr=2B12 addr=AABBCC cmd=B1 sub=10 d1=06 d2=14 rssi=-52.5
+V1 mode off

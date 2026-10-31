@@ -1,0 +1,47 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  server:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+      - name: PHP syntax of every file
+        run: find server -name '*.php' -not -path 'server/dist/*' -print0 | xargs -0 -n1 php -l > /dev/null
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: JavaScript syntax
+        run: |
+          node --check server/public/assets/app.js
+          node --check server/public/assets/analytics.js
+          node --check server/public/sw.js
+
+  translations:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Same keys, placeholders, macros and printf conversions in every language
+        run: python3 tools/check-lang.py
+
+  host-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y g++ libmbedtls-dev
+          pip install cryptography
+      - name: Smart mode and text helpers
+        run: |
+          g++ -std=c++17 -O2 -Wall tools/smart-test.cpp -o smart-test
+          ./smart-test
+      - name: Signing chain (signer in Python, verifier of the firmware in C++)
+        run: sh tools/test-signing.sh

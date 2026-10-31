@@ -1,0 +1,211 @@
+  0,0s V1 mode 433.892 MHz 2.4 kBaud, listening 150 s. Any char stops.
+  0,2s [134 ms] V1: 2B 15 AA BB CC B1 20 02 18 8F FC A5  addr=AABBCC cmd=B1 sub=20 d1=02 d2=18 rssi=-76.0 lqi=37
+  0,7s [703 ms] V1: 2B 15 AA BB CC A9 00 00 00 0F 39 AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-45.5 lqi=43
+  0,8s [803 ms] V1: 2B 15 AA BB CC B1 20 02 18 9F FA A9  addr=AABBCC cmd=B1 sub=20 d1=02 d2=18 rssi=-77.0 lqi=41
+  1,4s [1372 ms] V1: 2B 15 AA BB CC A9 00 00 00 0F 39 AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-45.5 lqi=43
+  1,5s [1471 ms] V1: 2B 15 AA BB CC B1 20 02 18 8F F7 A7  addr=AABBCC cmd=B1 sub=20 d1=02 d2=18 rssi=-78.5 lqi=39
+  2,1s [2042 ms] V1: 2B 15 AA BB CC A9 00 00 00 0F 35 AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-47.5 lqi=43
+  2,2s [2145 ms] V1: 2B 15 AA BB CC B1 20 02 18 87 FB A8  addr=AABBCC cmd=B1 sub=20 d1=02 d2=18 rssi=-76.5 lqi=40
+  2,7s [2711 ms] V1: 2B 15 AA BB CC A9 00 00 00 0F 19 AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-61.5 lqi=43
+  2,8s [2813 ms] V1: 2B 15 AA BB CC B1 20 02 18 9F EC C8  addr=AABBCC cmd=B1 sub=20 d1=02 d2=18 rssi=-84.0 lqi=72
+  3,4s [3380 ms] V1: 2B 15 AA BB CC A9 00 00 00 1F 1D AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-59.5 lqi=43
+  3,5s [3482 ms] V1: 2B 15 AA BB CC B1 20 02 18 9F F4 B4  addr=AABBCC cmd=B1 sub=20 d1=02 d2=18 rssi=-80.0 lqi=52
+  4,1s [4050 ms] V1: 2B 15 AA BB CC A9 00 00 00 0F 25 AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-55.5 lqi=43
+  4,2s [4151 ms] V1: 2B 15 1B B2 2E B1 20 02 18 9F F6 CA  addr=1BB22E cmd=B1 sub=20 d1=02 d2=18 rssi=-79.0 lqi=74
+  4,7s [4719 ms] V1: 2B 15 AA BB CC A9 00 00 00 07 2E AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-51.0 lqi=43
+  4,8s [4819 ms] V1: 2B 15 AA BB CC B1 20 02 18 9F EB B8  addr=AABBCC cmd=B1 sub=20 d1=02 d2=18 rssi=-84.5 lqi=56
+  5,4s [5389 ms] V1: 2B 15 AA BB CC A9 00 00 00 0F 30 AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-50.0 lqi=43
+  5,5s [5488 ms] V1: 2B 15 AA BB CC B1 20 02 18 87 FC A8  addr=AABBCC cmd=B1 sub=20 d1=02 d2=18 rssi=-76.0 lqi=40
+  6,1s [6058 ms] V1: 2B 15 AA BB CC A9 00 00 00 0F 30 AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-50.0 lqi=43
+  6,2s [6163 ms] V1: 2B 15 AA BB CC B1 20 02 18 8F F5 AD  addr=AABBCC cmd=B1 sub=20 d1=02 d2=18 rssi=-79.5 lqi=45
+  6,7s [6728 ms] V1: 2B 15 AA BB CC A9 00 00 00 0E 35 AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-47.5 lqi=43
+  6,8s [6830 ms] V1: 2B 15 AA BB CC B1 20 02 18 8F 05 AC  addr=AABBCC cmd=B1 sub=20 d1=02 d2=18 rssi=-71.5 lqi=44
+  7,4s [7398 ms] V1: 2B 15 AA BB CC A9 00 00 00 0B 36 AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-47.0 lqi=43
+  7,5s [7499 ms] V1: 2B 15 AA BB CC B1 20 02 18 9F 02 A8  addr=AABBCC cmd=B1 sub=20 d1=02 d2=18 rssi=-73.0 lqi=40
+  8,1s [8067 ms] V1: 2B 15 AA BB CC A9 00 00 00 0B 3D AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-43.5 lqi=43
+  8,2s [8168 ms] V1: 2B 15 AA BB CC B1 20 02 18 8F 00 A6  addr=AABBCC cmd=B1 sub=20 d1=02 d2=18 rssi=-74.0 lqi=38
+  8,8s [8736 ms] V1: 2B 15 AA BB CC A9 00 00 00 0D 3D AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-43.5 lqi=43
+  8,9s [8836 ms] V1: 2B 15 AA BB CC B1 20 02 18 8F 00 A8  addr=AABBCC cmd=B1 sub=20 d1=02 d2=18 rssi=-74.0 lqi=40
+  9,4s [9405 ms] V1: 2B 15 AA BB CC A9 00 00 00 09 3E AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-43.0 lqi=43
+  9,5s [9505 ms] V1: 2B 15 AA BB CC B1 20 02 18 9F FD A6  addr=AABBCC cmd=B1 sub=20 d1=02 d2=18 rssi=-75.5 lqi=38
+ 10,1s [10055 ms] V1: 2B 15 AA BB CC AB AE 00 00 0F 3E AC  addr=AABBCC cmd=AB sub=AE d1=00 d2=00 rssi=-43.0 lqi=44
+ 10,2s [10159 ms] V1: 2B 15 AA BB CC B1 20 02 18 9F FC A7  addr=AABBCC cmd=B1 sub=20 d1=02 d2=18 rssi=-76.0 lqi=39
+ 10,7s [10724 ms] V1: 2B 15 AA BB CC A9 00 00 00 0F 3E AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-43.0 lqi=43
+ 10,8s [10827 ms] V1: 2B 15 AA BB CC B1 60 00 18 9F FE A6  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-75.0 lqi=38
+ 11,4s [11394 ms] V1: 2B 15 AA BB CC A9 00 00 00 0F 3E AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-43.0 lqi=43
+ 11,5s [11496 ms] V1: 2B 15 AA BB CC B1 60 00 18 85 FC A9  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-76.0 lqi=41
+ 12,1s [12063 ms] V1: 2B 15 AA BB CC A9 00 00 00 0D 3B AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-44.5 lqi=43
+ 12,2s [12165 ms] V1: 2B 15 AA BB CC B1 60 00 18 8F 04 A7  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-72.0 lqi=39
+ 12,8s [12733 ms] V1: 2B 15 AA BB CC A9 00 00 00 03 2B AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-52.5 lqi=43
+ 12,8s [12833 ms] V1: 2B 15 AA BB CC B1 60 00 18 8F F7 A5  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-78.5 lqi=37
+ 13,4s [13402 ms] V1: 2B 15 AA BB CC A9 00 00 00 0F 29 AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-53.5 lqi=43
+ 13,5s [13502 ms] V1: 2B 15 AA BB CC B1 60 00 18 8F ED CB  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-83.5 lqi=75
+ 14,1s [14072 ms] V1: 2B 15 AA BB CC A9 00 00 00 0F 28 AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-54.0 lqi=43
+ 14,2s [14171 ms] V1: 2B 15 AA BB CC B1 60 00 18 8F F6 B8  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-79.0 lqi=56
+ 14,8s [14741 ms] V1: 2B 15 AA BB CC A9 00 00 00 0F 2C AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-52.0 lqi=43
+ 14,9s [14844 ms] V1: 2B 15 AA BB CC B1 60 00 18 9F F3 AE  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-80.5 lqi=46
+ 15,4s [15411 ms] V1: 2B 15 AA BB CC A9 00 00 00 0F 2C AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-52.0 lqi=43
+ 15,5s [15513 ms] V1: 2B 15 AA BB CC B1 60 00 18 8E FC A5  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-76.0 lqi=37
+ 16,1s [16080 ms] V1: 2B 15 AA BB CC A9 00 00 00 0F 2B AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-52.5 lqi=43
+ 16,2s [16182 ms] V1: 2B 15 AA BB CC B1 60 00 18 8D F2 A9  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-81.0 lqi=41
+ 16,8s [16749 ms] V1: 2B 15 AA BB CC A9 00 00 00 0F 2B AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-52.5 lqi=43
+ 16,9s [16851 ms] V1: 2B 15 AA BB CC B1 60 00 18 9F F4 A9  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-80.0 lqi=41
+ 17,4s [17419 ms] V1: 2B 15 AA BB CC A9 00 00 00 07 29 AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-53.5 lqi=43
+ 17,5s [17519 ms] V1: 2B 15 AA BB CC B1 60 00 18 8F FD B0  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-75.5 lqi=48
+ 18,1s [18088 ms] V1: 2B 15 AA BB CC A9 00 00 00 0F 27 AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-54.5 lqi=43
+ 18,2s [18188 ms] V1: 2B 15 AA BB CC B1 60 00 18 9F FE A7  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-75.0 lqi=39
+ 18,8s [18758 ms] V1: 2B 15 AA BB CC A9 00 00 00 1F 29 AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-53.5 lqi=43
+ 18,9s [18856 ms] V1: 2B 15 AA BB CC B1 60 00 18 8F 14 AC  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-64.0 lqi=44
+ 19,4s [19427 ms] V1: 2B 15 AA BB CC A9 00 00 00 0F 2F AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-50.5 lqi=43
+ 19,5s [19530 ms] V1: 2B 15 AA BB CC B1 60 00 18 8F 16 AC  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-63.0 lqi=44
+ 20,1s [20097 ms] V1: 2B 15 AA BB CC A9 00 00 00 0F 37 AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-46.5 lqi=43
+ 20,2s [20199 ms] V1: 2B 15 AA BB CC B1 60 00 18 8F 14 AC  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-64.0 lqi=44
+ 20,8s [20766 ms] V1: 2B 15 AA BB CC A9 00 00 00 0F 35 AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-47.5 lqi=43
+ 20,9s [20868 ms] V1: 2B 15 AA BB CC B1 60 00 18 8F 15 AC  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-63.5 lqi=44
+ 21,5s [21436 ms] V1: 2B 15 AA BB CC A9 00 00 00 0F 29 AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-53.5 lqi=43
+ 21,5s [21537 ms] V1: 2B 15 AA BB CC B1 60 00 18 9F 12 AC  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-65.0 lqi=44
+ 22,1s [22105 ms] V1: 2B 15 AA BB CC A9 00 00 00 0F 29 AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-53.5 lqi=43
+ 22,2s [22205 ms] V1: 2B 15 AA BB CC B1 60 00 18 8F 11 AC  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-65.5 lqi=44
+ 22,8s [22775 ms] V1: 2B 15 AA BB CC A9 00 00 00 07 2F AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-50.5 lqi=43
+ 22,9s [22874 ms] V1: 2B 15 AA BB CC B1 60 00 18 8F 12 AB  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-65.0 lqi=43
+ 23,5s [23444 ms] V1: 2B 15 AA BB CC A9 00 00 00 0F 37 AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-46.5 lqi=43
+ 23,6s [23543 ms] V1: 2B 15 AA BB CC B1 60 00 18 8F 14 AC  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-64.0 lqi=44
+ 24,1s [24113 ms] V1: 2B 15 AA BB CC A9 00 00 00 0F 37 AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-46.5 lqi=43
+ 24,2s [24216 ms] V1: 2B 15 AA BB CC B1 60 00 18 97 15 AC  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-63.5 lqi=44
+ 24,8s [24783 ms] V1: 2B 15 AA BB CC A9 00 00 00 0F 29 AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-53.5 lqi=43
+ 24,9s [24885 ms] V1: 2B 15 AA BB CC B1 60 00 18 8F 0E AC  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-67.0 lqi=44
+ 25,5s [25452 ms] V1: 2B 15 AA BB CC A9 00 00 00 17 28 AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-54.0 lqi=43
+ 25,6s [25554 ms] V1: 2B 15 AA BB CC B1 60 00 18 8F 0E AC  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-67.0 lqi=44
+ 26,1s [26122 ms] V1: 2B 15 AA BB CC A9 00 00 00 0F 2F AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-50.5 lqi=43
+ 26,2s [26222 ms] V1: 2B 15 AA BB CC B1 60 00 18 8F 10 AC  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-66.0 lqi=44
+ 26,8s [26791 ms] V1: 2B 15 AA BB CC A9 00 00 00 0E 30 AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-50.0 lqi=43
+ 26,9s [26891 ms] V1: 2B 15 AA BB CC B1 60 00 18 8F 10 AC  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-66.0 lqi=44
+ 27,5s [27461 ms] V1: 2B 15 AA BB CC A9 00 00 00 0F 2F AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-50.5 lqi=43
+ 27,6s [27560 ms] V1: 2B 15 AA BB CC B1 60 00 18 8F 10 AC  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-66.0 lqi=44
+ 28,1s [28130 ms] V1: 2B 15 AA BB CC A9 00 00 00 0F 2D AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-51.5 lqi=43
+ 28,2s [28234 ms] V1: 2B 15 AA BB CC B1 60 00 18 8E 12 AC  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-65.0 lqi=44
+ 28,8s [28800 ms] V1: 2B 15 AA BB CC A9 00 00 00 0F 2D AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-51.5 lqi=43
+ 28,9s [28903 ms] V1: 2B 15 AA BB CC B1 60 00 18 8F 12 AC  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-65.0 lqi=44
+ 29,5s [29469 ms] V1: 2B 15 AA BB CC A9 00 00 00 07 2D AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-51.5 lqi=43
+ 29,6s [29571 ms] V1: 2B 15 AA BB CC B1 60 00 18 8F 13 AC  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-64.5 lqi=44
+ 30,2s [30138 ms] V1: 2B 15 AA BB CC A9 00 00 00 0F 2E AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-51.0 lqi=43
+ 30,3s [30240 ms] V1: 2B 15 AA BB CC B1 60 00 18 9F 12 AC  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-65.0 lqi=44
+ 30,8s [30808 ms] V1: 2B 15 AA BB CC A9 00 00 00 0F 2D AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-51.5 lqi=43
+ 30,9s [30908 ms] V1: 2B 15 AA BB CC B1 60 00 18 8F 13 AC  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-64.5 lqi=44
+ 31,5s [31477 ms] V1: 2B 15 AA BB CC A9 00 00 00 0F 2E AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-51.0 lqi=43
+ 31,6s [31577 ms] V1: 2B 15 AA BB CC B1 60 00 18 9F 13 AC  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-64.5 lqi=44
+ 32,2s [32147 ms] V1: 2B 15 AA BB CC A9 00 00 00 0F 2E AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-51.0 lqi=43
+ 32,3s [32246 ms] V1: 2B 15 AA BB CC B1 60 00 18 87 12 AC  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-65.0 lqi=44
+ 32,8s [32816 ms] V1: 2B 15 AA BB CC A9 00 00 00 0F 2E AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-51.0 lqi=43
+ 32,9s [32914 ms] V1: 2B 15 AA BB CC B1 60 00 18 9F 12 AB  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-65.0 lqi=43
+ 33,5s [33486 ms] V1: 2B 15 AA BB CC A9 00 00 00 17 2D AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-51.5 lqi=43
+ 33,6s [33588 ms] V1: 2B 15 AA BB CC B1 60 00 18 87 11 AC  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-65.5 lqi=44
+ 34,2s [34155 ms] V1: 2B 15 AA BB CC A9 00 00 00 0F 2E AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-51.0 lqi=43
+ 34,3s [34257 ms] V1: 2B 15 AA BB CC B1 60 00 18 8F 13 AC  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-64.5 lqi=44
+ 34,8s [34825 ms] V1: 2B 15 AA BB CC A9 00 00 00 0F 2B AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-52.5 lqi=43
+ 34,9s [34926 ms] V1: 2B 15 AA BB CC B1 60 00 18 9F 12 AC  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-65.0 lqi=44
+ 35,5s [35494 ms] V1: 2B 15 AA BB CC A9 00 00 00 0F 11 AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-65.5 lqi=43
+ 35,6s [35594 ms] V1: 2B 15 AA BB CC B1 60 00 18 9F 04 A8  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-72.0 lqi=40
+ 36,2s [36163 ms] V1: 2B 15 AA BB CC A9 00 00 00 1F 20 AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-58.0 lqi=43
+ 36,3s [36263 ms] V1: 2B 15 AA BB CC B1 60 00 18 9F 02 A5  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-73.0 lqi=37
+ 36,9s [36833 ms] V1: 2B 15 AA BB CC A9 00 00 00 0F 22 AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-57.0 lqi=43
+ 36,9s [36932 ms] V1: 2B 15 AA BB CC B1 60 00 18 9F FF A3  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-74.5 lqi=35
+ 37,5s [37502 ms] V1: 2B 15 AA BB CC A9 00 00 00 0F 23 AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-56.5 lqi=43
+ 37,6s [37605 ms] V1: 2B 15 AA BB CC B1 60 00 18 87 00 A7  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-74.0 lqi=39
+ 38,2s [38172 ms] V1: 2B 15 AA BB CC A9 00 00 00 0F 25 AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-55.5 lqi=43
+ 38,3s [38274 ms] V1: 2B 15 AA BB CC B1 60 00 18 9F FB A1  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-76.5 lqi=33
+ 38,9s [38841 ms] V1: 2B 15 AA BB CC A9 00 00 00 1F 1A AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-61.0 lqi=43
+ 39,0s [38943 ms] V1: 2B 15 AA BB CC B1 60 00 18 8F 00 A5  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-74.0 lqi=37
+ 39,5s [39511 ms] V1: 2B 15 AA BB CC A9 00 00 00 0F 24 AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-56.0 lqi=43
+ 39,6s [39612 ms] V1: 2B 15 AA BB CC B1 60 00 18 8F 01 A5  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-73.5 lqi=37
+115,2s [115156 ms] V1: 2B 15 AA BB CC A9 00 00 00 0F 28 AA  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-54.0 lqi=42
+115,3s [115259 ms] V1: 2B 15 AA BB CC B1 60 00 18 8F 13 AB  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-64.5 lqi=43
+115,8s [115829 ms] V1: 2B 15 AA BB CC A9 00 00 00 07 23 AA  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-56.5 lqi=42
+115,9s [115932 ms] V1: 2B 15 AA BB CC B1 60 00 18 9F 13 AC  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-64.5 lqi=44
+116,5s [116498 ms] V1: 2B 15 AA BB CC A9 00 00 00 0F 13 AA  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-64.5 lqi=42
+116,6s [116600 ms] V1: 2B 15 AA BB CC B1 60 00 18 8F 11 AC  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-65.5 lqi=44
+117,2s [117168 ms] V1: 2B 15 AA BB CC A9 00 00 00 0F 23 AA  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-56.5 lqi=42
+117,3s [117269 ms] V1: 2B 15 AA BB CC B1 60 00 18 8F 11 AC  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-65.5 lqi=44
+117,9s [117837 ms] V1: 2B 15 AA BB CC A9 00 00 00 0F 2A AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-53.0 lqi=43
+118,0s [117938 ms] V1: 2B 15 AA BB CC B1 60 00 18 8F 14 AC  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-64.0 lqi=44
+118,5s [118507 ms] V1: 2B 15 AA BB CC A9 00 00 00 0F 23 AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-56.5 lqi=43
+118,6s [118607 ms] V1: 2B 15 AA BB CC B1 60 00 18 9F 13 AB  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-64.5 lqi=43
+119,2s [119176 ms] V1: 2B 15 AA BB CC A9 00 00 00 07 15 AA  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-63.5 lqi=42
+119,3s [119276 ms] V1: 2B 15 AA BB CC B1 60 00 18 8F 11 AC  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-65.5 lqi=44
+119,9s [119846 ms] V1: 2B 15 AA BB CC A9 00 00 00 0F 18 AA  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-62.0 lqi=42
+120,0s [119944 ms] V1: 2B 15 AA BB CC B1 60 00 18 8F 12 AC  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-65.0 lqi=44
+120,5s [120515 ms] V1: 2B 15 AA BB CC A9 00 00 00 0F 25 AA  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-55.5 lqi=42
+120,6s [120618 ms] V1: 2B 15 AA BB CC B1 60 00 18 9F 13 AC  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-64.5 lqi=44
+121,2s [121184 ms] V1: 2B 15 AA BB CC A9 00 00 00 0F 31 AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-49.5 lqi=43
+121,3s [121287 ms] V1: 2B 15 AA BB CC B1 60 00 18 8F 14 AC  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-64.0 lqi=44
+121,9s [121854 ms] V1: 2B 15 AA BB CC A9 00 00 00 1F 35 AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-47.5 lqi=43
+122,0s [121956 ms] V1: 2B 15 AA BB CC B1 60 00 18 87 17 AC  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-62.5 lqi=44
+122,5s [122523 ms] V1: 2B 15 AA BB CC A9 00 00 00 0F 37 AA  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-46.5 lqi=42
+122,6s [122625 ms] V1: 2B 15 AA BB CC B1 60 00 18 9F 13 AC  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-64.5 lqi=44
+123,2s [123193 ms] V1: 2B 15 AA BB CC A9 00 00 00 07 37 AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-46.5 lqi=43
+123,3s [123293 ms] V1: 2B 15 AA BB CC B1 60 00 18 8F 16 AC  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-63.0 lqi=44
+123,9s [123862 ms] V1: 2B 15 AA BB CC A9 00 00 00 0F 2A AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-53.0 lqi=43
+124,0s [123962 ms] V1: 2B 15 AA BB CC B1 60 00 18 9F 12 A8  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-65.0 lqi=40
+124,5s [124532 ms] V1: 2B 15 AA BB CC A9 00 00 00 0F 30 AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-50.0 lqi=43
+124,6s [124631 ms] V1: 2B 15 AA BB CC B1 60 00 18 8F 0A AB  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-69.0 lqi=43
+125,2s [125201 ms] V1: 2B 15 AA BB CC A9 00 00 00 0F 11 AA  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-65.5 lqi=42
+125,3s [125300 ms] V1: 2B 15 AA BB CC B1 60 00 18 8F 0B AC  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-68.5 lqi=44
+125,9s [125871 ms] V1: 2B 15 AA BB CC A9 00 00 00 1F 1B AA  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-60.5 lqi=42
+126,0s [125974 ms] V1: 2B 15 AA BB CC B1 60 00 18 8F 11 AC  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-65.5 lqi=44
+126,6s [126540 ms] V1: 2B 15 AA BB CC A9 00 00 00 0F 23 AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-56.5 lqi=43
+126,7s [126642 ms] V1: 2B 15 AA BB CC B1 60 00 18 8F 08 A9  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-70.0 lqi=41
+127,2s [127209 ms] V1: 2B 15 AA BB CC A9 00 00 00 07 2D AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-51.5 lqi=43
+127,3s [127312 ms] V1: 2B 15 AA BB CC B1 60 00 18 9D F6 AE  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-79.0 lqi=46
+127,9s [127879 ms] V1: 2B 15 AA BB CC A9 00 00 00 0F 2C AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-52.0 lqi=43
+128,0s [127980 ms] V1: 2B 15 AA BB CC B1 60 00 18 9F F7 AD  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-78.5 lqi=45
+128,6s [128548 ms] V1: 2B 15 AA BB CC A9 00 00 00 0F 2B AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-52.5 lqi=43
+128,7s [128649 ms] V1: 2B 15 AA BB CC B1 60 00 18 9F F7 A0  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-78.5 lqi=32
+129,2s [129218 ms] V1: 2B 15 AA BB CC A9 00 00 00 0F 28 AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-54.0 lqi=43
+129,3s [129317 ms] V1: 2B 15 AA BB CC B1 60 00 18 87 F5 A5  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-79.5 lqi=37
+129,9s [129887 ms] V1: 2B 15 AA BB CC A9 00 00 00 0F 2B AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-52.5 lqi=43
+130,0s [129986 ms] V1: 2B 15 AA BB CC B1 60 00 18 8D F8 A6  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-78.0 lqi=38
+130,6s [130557 ms] V1: 2B 15 AA BB CC A9 00 00 00 0F 29 AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-53.5 lqi=43
+130,7s [130655 ms] V1: 2B 15 AA BB CC B1 60 00 18 9F FC A9  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-76.0 lqi=41
+131,2s [131226 ms] V1: 2B 15 AA BB CC A9 00 00 00 0F 2D AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-51.5 lqi=43
+131,3s [131329 ms] V1: 2B 15 AA BB CC B1 60 00 18 8F F9 A8  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-77.5 lqi=40
+131,9s [131896 ms] V1: 2B 15 AA BB CC A9 00 00 00 0F 2E AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-51.0 lqi=43
+132,0s [131997 ms] V1: 2B 15 AA BB CC B1 60 00 18 9F FF A4  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-74.5 lqi=36
+132,6s [132565 ms] V1: 2B 15 AA BB CC A9 00 00 00 0E 26 AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-55.0 lqi=43
+132,7s [132666 ms] V1: 2B 15 AA BB CC B1 60 00 18 8F F8 A5  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-78.0 lqi=37
+133,2s [133234 ms] V1: 2B 15 AA BB CC A9 00 00 00 0F 2C AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-52.0 lqi=43
+133,3s [133335 ms] V1: 2B 15 AA BB CC B1 60 00 18 9F 00 A3  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-74.0 lqi=35
+133,9s [133904 ms] V1: 2B 15 AA BB CC A9 00 00 00 09 2D AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-51.5 lqi=43
+134,0s [134003 ms] V1: 2B 15 AA BB CC B1 60 00 18 8F FA A4  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-77.0 lqi=36
+134,6s [134573 ms] V1: 2B 15 AA BB CC A9 00 00 00 0F 2B AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-52.5 lqi=43
+134,7s [134677 ms] V1: 2B 15 AA BB CC B1 60 00 18 87 F9 A6  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-77.5 lqi=38
+135,3s [135243 ms] V1: 2B 15 AA BB CC A9 00 00 00 07 2B AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-52.5 lqi=43
+135,4s [135346 ms] V1: 2B 15 AA BB CC B1 60 00 18 8B FC A7  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-76.0 lqi=39
+135,9s [135912 ms] V1: 2B 15 AA BB CC A9 00 00 00 0B 2D AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-51.5 lqi=43
+136,0s [136014 ms] V1: 2B 15 AA BB CC B1 60 00 18 9F FC A9  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-76.0 lqi=41
+136,6s [136582 ms] V1: 2B 15 AA BB CC A9 00 00 00 0F 2D AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-51.5 lqi=43
+136,7s [136683 ms] V1: 2B 15 AA BB CC B1 60 00 18 9F FB A3  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-76.5 lqi=35
+137,3s [137251 ms] V1: 2B 15 AA BB CC A9 00 00 00 05 2E AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-51.0 lqi=43
+137,4s [137352 ms] V1: 2B 15 AA BB CC B1 60 00 18 9F FE A8  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-75.0 lqi=40
+137,9s [137921 ms] V1: 2B 15 AA BB CC A9 00 00 00 1F 34 AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-48.0 lqi=43
+138,0s [138021 ms] V1: 2B 15 AA BB CC B1 60 00 18 8D EE BE  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-83.0 lqi=62
+138,6s [138590 ms] V1: 2B 15 AA BB CC A9 00 00 00 0F 36 AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-47.0 lqi=43
+138,7s [138689 ms] V1: 2B 15 AA BB CC B1 60 00 18 9F FB A7  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-76.5 lqi=39
+139,3s [139259 ms] V1: 2B 15 AA BB CC A9 00 00 00 0F 37 AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-46.5 lqi=43
+139,4s [139364 ms] V1: 2B 15 AA BB CC B1 60 00 18 8F 00 AA  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-74.0 lqi=42
+139,9s [139929 ms] V1: 2B 15 AA BB CC A9 00 00 00 0F 37 AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-46.5 lqi=43
+140,0s [140032 ms] V1: 2B 15 AA BB CC B1 60 00 18 8F 01 AA  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-73.5 lqi=42
+140,6s [140598 ms] V1: 2B 15 AA BB CC A9 00 00 00 0F 2C AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-52.0 lqi=43
+140,7s [140700 ms] V1: 2B 15 AA BB CC B1 60 00 18 8F 10 AC  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-66.0 lqi=44
+141,3s [141268 ms] V1: 2B 15 AA BB CC A9 00 00 00 0F 30 AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-50.0 lqi=43
+141,4s [141369 ms] V1: 2B 15 AA BB CC B1 60 00 18 8F 12 AC  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-65.0 lqi=44
+142,0s [141937 ms] V1: 2B 15 AA BB CC A9 00 00 00 0B 2C AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-52.0 lqi=43
+142,0s [142038 ms] V1: 2B 15 AA BB CC B1 60 00 18 8F 15 AC  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-63.5 lqi=44
+142,6s [142607 ms] V1: 2B 15 AA BB CC A9 00 00 00 0F 33 AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-48.5 lqi=43
+142,7s [142707 ms] V1: 2B 15 AA BB CC B1 60 00 18 8F 11 AB  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-65.5 lqi=43
+143,3s [143276 ms] V1: 2B 15 AA BB CC A9 00 00 00 0F 2B AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-52.5 lqi=43
+143,4s [143375 ms] V1: 2B 15 AA BB CC B1 60 00 18 8F 03 A8  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-72.5 lqi=40
+144,0s [143946 ms] V1: 2B 15 AA BB CC A9 00 00 00 0F 2D AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-51.5 lqi=43
+144,1s [144049 ms] V1: 2B 15 AA BB CC B1 60 00 18 8F 02 AA  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-73.0 lqi=42
+144,6s [144615 ms] V1: 2B 15 AA BB CC A9 00 00 00 0D 2C AB  addr=AABBCC cmd=A9 sub=00 d1=00 d2=00 rssi=-52.0 lqi=43
+144,7s [144717 ms] V1: 2B 15 AA BB CC B1 60 00 18 9F 00 A7  addr=AABBCC cmd=B1 sub=60 d1=00 d2=18 rssi=-74.0 lqi=39
+150,0s V1 mode off

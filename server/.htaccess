@@ -1,0 +1,9 @@
+# For hosts whose document root is this project folder (for example example.com -> /web/hinasto):
+# everything is served from public/, so app/, config/, storage/, database/ and tools/ are never reachable.
+# (If the document root points at public/ itself this file is simply not used.)
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule ^(?!public/)(.*)$ public/$1 [L]
+</IfModule>

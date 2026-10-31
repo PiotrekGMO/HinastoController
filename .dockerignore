@@ -1,0 +1,6 @@
+# the builder image (tools/builder/Dockerfile) is built from the repository root and needs only these two folders
+*
+!sniffer
+!tools
+sniffer/signing_key.h
+sniffer/lang_select.h

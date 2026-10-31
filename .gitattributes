@@ -1,0 +1,5 @@
+# scripts that run in Linux (the builder image, deploy containers) must keep LF line endings
+*.sh text eol=lf
+tools/builder/hinasto text eol=lf
+server/docker/deploy.sh text eol=lf
+*.cmd text eol=crlf

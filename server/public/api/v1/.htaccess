@@ -1,0 +1,15 @@
+# Static copies of the firmware images (written by the application) live here: nothing in this folder may ever run as PHP,
+# even if another account of a shared host drops a file into this (world-writable) directory.
+<FilesMatch "\.(php|phtml|phar|php[0-9]?)$">
+  Require all denied
+</FilesMatch>
+<IfModule mod_php.c>
+  php_flag engine off
+</IfModule>
+<IfModule mod_php7.c>
+  php_flag engine off
+</IfModule>
+<IfModule mod_php8.c>
+  php_flag engine off
+</IfModule>
+Options -ExecCGI

@@ -1,0 +1,7 @@
+dist
+*.log
+deploy_*.env
+# runtime data written on the server (config.php with the database password) never goes into the package
+storage/*
+!storage/.htaccess
+!storage/.gitkeep

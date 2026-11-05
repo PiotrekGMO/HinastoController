@@ -248,6 +248,7 @@ return [
     'js.setpoint_label' => 'Solltemperatur',
     'js.set_smart' => 'Smart-Ziel setzen',
     'js.set_temp' => 'Temperatur setzen',
+    'js.setpoint_applied' => 'Eingestellt: {t} °C',
     'js.smart_info' => 'Smart: {parts}.',
     'js.smart_waiting' => ' Das Heizgerät startet, wenn die Temperatur auf {t} °C fällt.',
     'js.last_message' => 'letzte Nachricht: {when}',

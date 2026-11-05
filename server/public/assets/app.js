@@ -304,7 +304,6 @@ function updateHeater(card, device, h) {
     chamber: on && h.chamber != null ? h.chamber + ' °C' : '–',
     volts: h.volts != null ? h.volts + ' V' : '–',
     level: h.level != null ? 'H' + h.level : '–',
-    setpoint: smart ? smart.target + ' °C' : h.setpoint != null ? h.setpoint + ' °C' : '–',
     autolabel: smart ? T('smart_target_label') : T('setpoint_label'),
   });
   setStatus($('[data-bind="run"]', el), runText + (busy ? ' · ' + h.busy + '…' : ''), tone);
@@ -353,6 +352,20 @@ function updateHeater(card, device, h) {
   if (device.locked) lockButtons(el);
   const input = $('input.sp', el);
   if (document.activeElement !== input) input.value = card.setpoint[key];
+  const applied = smart ? smart.target : h.setpoint;
+  el.dataset.applied = applied != null ? applied : '';
+  paintSetpoint(el, card.setpoint[key]);
+}
+
+// The box between - and + shows the target the heater works with. While the typed value differs from it the box turns
+// accent, a note names the value in force and the Set button wakes up.
+function paintSetpoint(el, value) {
+  const known = el.dataset.applied !== '';
+  const applied = Number(el.dataset.applied);
+  const pending = known && value !== applied;
+  $('.spbox', el).classList.toggle('pending', pending);
+  $('[data-tempbtn]', el).classList.toggle('quiet', known && !pending);
+  $('[data-pend]', el).textContent = pending ? T('setpoint_applied', {t: applied}) : '';
 }
 
 // ---- temperature chart: axes, grid, selectable range, a readout under the finger or the mouse ----
@@ -687,7 +700,9 @@ document.addEventListener('input', (event) => {
   const input = event.target;
   if (!input.classList.contains('sp')) return;
   const card = cards.get(Number(input.closest('.device').dataset.dev));
-  card.setpoint[input.closest('.heater').dataset.h] = parseInt(input.value, 10) || 0;
+  const heaterEl = input.closest('.heater');
+  card.setpoint[heaterEl.dataset.h] = parseInt(input.value, 10) || 0;
+  paintSetpoint(heaterEl, card.setpoint[heaterEl.dataset.h]);
 });
 
 document.addEventListener('click', async (event) => {
@@ -735,6 +750,7 @@ document.addEventListener('click', async (event) => {
     case 'bump': {
       card.setpoint[heater] = Math.min(35, Math.max(6, (card.setpoint[heater] || 20) + value));
       $('input.sp', heaterEl).value = card.setpoint[heater];
+      paintSetpoint(heaterEl, card.setpoint[heater]);
       break;
     }
     case 'console': {

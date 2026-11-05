@@ -248,6 +248,7 @@ return [
     'js.setpoint_label' => 'Požadovaná teplota',
     'js.set_smart' => 'Nastaviť cieľ smart',
     'js.set_temp' => 'Nastaviť teplotu',
+    'js.setpoint_applied' => 'Nastavené: {t} °C',
     'js.smart_info' => 'Smart: {parts}.',
     'js.smart_waiting' => ' Kúrenie sa spustí, keď teplota klesne na {t} °C.',
     'js.last_message' => 'posledná správa: {when}',

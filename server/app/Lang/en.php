@@ -248,6 +248,7 @@ return [
     'js.setpoint_label' => 'Target temperature',
     'js.set_smart' => 'Set smart target',
     'js.set_temp' => 'Set temperature',
+    'js.setpoint_applied' => 'Currently set: {t} °C',
     'js.smart_info' => 'Smart: {parts}.',
     'js.smart_waiting' => ' The heater will start when the temperature drops to {t} °C.',
     'js.last_message' => 'last message: {when}',

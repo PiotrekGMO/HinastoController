@@ -159,9 +159,17 @@ code { font: 13px ui-monospace, "SF Mono", Consolas, monospace; background: var(
 .big { font-size: 40px; font-weight: 700; letter-spacing: -.02em; text-align: center; margin: 4px 0 10px; }
 .levels { display: grid; grid-template-columns: repeat(6, 1fr); gap: 6px; }
 .levels .btn { padding: 0; min-width: 0; }
-.stepper { display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 12px; }
-.stepper label { display: flex; align-items: center; gap: 6px; }
-.stepper input { width: 70px; text-align: center; }
+/* the box between - and + is the readout of the target and its input at once */
+.stepper { display: flex; align-items: center; gap: 10px; margin: 4px 0 0; }
+.stepper .btn { flex: none; width: 52px; padding: 0; font-size: 22px; }
+.spbox { flex: 1; min-width: 0; min-height: 52px; display: flex; align-items: center; justify-content: center; gap: 4px;
+  border: 1px solid var(--border); border-radius: 10px; background: var(--surface); color: var(--text); }
+.spbox:focus-within { outline: 2px solid var(--accent); outline-offset: 2px; }
+.spbox input { width: 2.2ch; padding: 0; border: 0; outline: 0; background: none; color: inherit; font: inherit; font-size: 34px; font-weight: 700; line-height: 1; height: 1.2em; text-align: center; }
+.spbox span { font-size: 16px; line-height: 1; color: var(--muted); position: relative; top: .35em; }  /* sits on the baseline of the digits */
+.spbox.pending { border-color: var(--accent); color: var(--accent); }
+.pendnote { min-height: 1.35em; margin: 8px 0 0; text-align: center; color: var(--accent); }
+.btn.primary.quiet { opacity: .45; }
 
 .cmds { margin-top: 12px; display: grid; gap: 2px; }
 .cmds .ok { color: var(--ok); }

@@ -196,13 +196,13 @@
 
     <div class="panel" data-auto hidden>
       <div class="panel-label" data-bind="autolabel"><?= $t('heater.setpoint') ?></div>
-      <div class="big" data-bind="setpoint"></div>
-      <p class="muted small smartinfo" data-smartinfo></p>
       <div class="stepper">
         <button class="btn" data-a="bump" data-v="-1" aria-label="<?= $t('heater.less') ?>">−</button>
-        <label><input class="sp" inputmode="numeric" aria-label="<?= $t('heater.setpoint') ?>"><span>°C</span></label>
+        <label class="spbox"><input class="sp" inputmode="numeric" aria-label="<?= $t('heater.setpoint') ?>"><span>°C</span></label>
         <button class="btn" data-a="bump" data-v="1" aria-label="<?= $t('heater.more') ?>">+</button>
       </div>
+      <p class="small pendnote" data-pend></p>
+      <p class="muted small smartinfo" data-smartinfo></p>
       <button class="btn primary wide" data-a="temp" data-tempbtn><?= $t('heater.set_temp') ?></button>
       <button class="btn wide" data-a="smartoff" data-smartoff hidden><?= $t('heater.smart_off') ?></button>
     </div>

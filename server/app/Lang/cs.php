@@ -248,6 +248,7 @@ return [
     'js.setpoint_label' => 'Požadovaná teplota',
     'js.set_smart' => 'Nastavit cíl smart',
     'js.set_temp' => 'Nastavit teplotu',
+    'js.setpoint_applied' => 'Nastaveno: {t} °C',
     'js.smart_info' => 'Smart: {parts}.',
     'js.smart_waiting' => ' Topidlo se spustí, když teplota klesne na {t} °C.',
     'js.last_message' => 'poslední zpráva: {when}',

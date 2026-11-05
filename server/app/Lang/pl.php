@@ -248,6 +248,7 @@ return [
     'js.setpoint_label' => 'Temperatura zadana',
     'js.set_smart' => 'Ustaw cel smart',
     'js.set_temp' => 'Ustaw temperaturę',
+    'js.setpoint_applied' => 'Ustawiony: {t} °C',
     'js.smart_info' => 'Smart: {parts}.',
     'js.smart_waiting' => ' Grzejnik ruszy, gdy temperatura spadnie do {t} °C.',
     'js.last_message' => 'ostatnia wiadomość: {when}',

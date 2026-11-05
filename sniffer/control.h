@@ -6,7 +6,7 @@
 #include "settings.h"
 #include "lang.h"
 
-#define FW_VERSION 25 // bump on every release so the log and the panel show which firmware runs
+#define FW_VERSION 24  // bump on every release so the log and the panel show which firmware runs
 
 extern SemaphoreHandle_t radioMux;  // the CC1101 is shared between the serial console and the worker task
 
@@ -19,8 +19,6 @@ bool controlFindRemote(int seconds, HeaterId& out, int* heard);
 bool controlIdle();                      // no job running or waiting: a good moment to restart for an update
 void controlSetOtaBusy(bool busy);       // an OTA update is running: leave the radio alone
 void controlSetVerbose(bool on);         // also log every raw frame (serial console: "verbose 1")
-void controlAnomDump();                  // serial console: "anom", the odd frames kept in flash
-void controlAnomClear();                 // serial console: "anom clear"
 
 // ---- event log (ring buffer) ----
 void wlog(const char* fmt, ...);

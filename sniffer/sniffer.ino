@@ -541,8 +541,6 @@ void handle(String line) {
     Serial.printf("tx power now %.1f dBm\n", WiFi.getTxPower() / 4.0f);
     return;
   }
-  if (line == "anom") { controlAnomDump(); return; }
-  if (line == "anom clear") { controlAnomClear(); return; }
   if (line == "verbose 0" || line == "verbose 1") { controlSetVerbose(line == "verbose 1"); Serial.println("ok"); return; }
   if (line == "boot") { Serial.println("rebooting to ROM bootloader"); Serial.flush(); delay(100); usb_persist_restart(RESTART_BOOTLOADER); }
   if (!radioOk) { Serial.println("radio not initialised"); return; }

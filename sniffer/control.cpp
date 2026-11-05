@@ -172,6 +172,78 @@ static void describe(char* out, size_t n, uint8_t page, uint8_t sub, int v) {
   else snprintf(out, n, L_D_UNKNOWN, page, sub, v);
 }
 
+// ---- odd frames: a reply of the heater whose value is out of the usual range, or that the plausibility filter refuses ----
+// (an error state such as E-8 may be sent in a form nobody has decoded yet). Each distinct frame is logged once as "ANOM ..."
+// and the last ANOM_N are kept in flash, because the log ring is overwritten within minutes. Console: "anom", "anom clear".
+
+static const int ANOM_N = 8;
+static const char* const ANOM_WHY[] = {"", "off-n", "volt-n", "level-n", "chamber-n", "refused"};
+struct AnomEntry {
+  uint32_t t;         // wall clock when known, else 0
+  uint8_t frame[4];   // page, sub, d1, d2 of the reply
+  uint8_t why, heater;
+};
+struct AnomStore {
+  uint8_t n;
+  AnomEntry e[ANOM_N];  // newest first
+};
+static uint32_t anomSeen[ANOM_N];  // keys already handled since boot, so a repeating frame costs nothing
+static uint8_t anomSeenAt = 0;
+
+static uint8_t anomalyWhy(uint8_t page, uint8_t sub, int n) {
+  sub &= 0xE0;
+  if (page == 0xB1 && sub == 0x00 && (n < 6 || n > 40)) return 1;  // the off page carries the supply voltage, 12 V normally
+  if (page == 0xB2 && sub == 0x20 && (n < 6 || n > 40)) return 2;
+  if (page == 0xB1 && sub == 0x20 && !((n >= 1 && n <= 6) || (n >= 65 && n <= 110))) return 3;
+  if (page == 0xB1 && sub == 0xA0 && n > 400) return 4;
+  return 0;
+}
+
+static void noteAnomaly(const Heater& h, const uint8_t* b, uint8_t why) {
+  uint8_t hi = (uint8_t)(&h - heaters);
+  uint32_t key = ((uint32_t)b[5] << 24) | ((uint32_t)b[6] << 16) | ((uint32_t)b[7] << 8) | (b[8] & 0x80) | hi;  // d2 low bits flicker
+  for (int i = 0; i < ANOM_N; i++) if (anomSeen[i] == key) return;
+  anomSeen[anomSeenAt++ % ANOM_N] = key;
+  wlog("ANOM %s%s %02X %02X %02X %02X", h.prefix, ANOM_WHY[why], b[5], b[6], b[7], b[8]);
+  AnomStore st = {};
+  Preferences p;
+  if (!p.begin("hnanom", false)) return;
+  if (p.getBytesLength("st") == sizeof st) p.getBytes("st", &st, sizeof st);
+  for (int i = 0; i < st.n; i++)
+    if (!memcmp(st.e[i].frame, b + 5, 4) && st.e[i].heater == hi) { p.end(); return; }  // stored in an earlier run
+  if (st.n < ANOM_N) st.n++;
+  memmove(&st.e[1], &st.e[0], sizeof(AnomEntry) * (ANOM_N - 1));
+  time_t now = time(nullptr);
+  st.e[0].t = now > 1700000000 ? (uint32_t)now : 0;
+  memcpy(st.e[0].frame, b + 5, 4);
+  st.e[0].why = why;
+  st.e[0].heater = hi;
+  p.putBytes("st", &st, sizeof st);
+  p.end();
+}
+
+void controlAnomDump() {
+  AnomStore st = {};
+  Preferences p;
+  if (p.begin("hnanom", true)) {
+    if (p.getBytesLength("st") == sizeof st) p.getBytes("st", &st, sizeof st);
+    p.end();
+  }
+  Serial.printf("%d odd frame(s), newest first\n", st.n);
+  for (int i = 0; i < st.n && i < ANOM_N; i++) {
+    const AnomEntry& e = st.e[i];
+    Serial.printf("  heater%d %s %02X %02X %02X %02X  n=%d  t=%lu\n", e.heater + 1, ANOM_WHY[e.why < 6 ? e.why : 0], e.frame[0], e.frame[1],
+                  e.frame[2], e.frame[3], e.frame[2] * 2 + (e.frame[3] >> 7), (unsigned long)e.t);
+  }
+}
+
+void controlAnomClear() {
+  Preferences p;
+  if (p.begin("hnanom", false)) { p.clear(); p.end(); }
+  memset(anomSeen, 0, sizeof anomSeen);
+  Serial.println("ok");
+}
+
 static bool pollOnce(Heater& h) {
   memcpy(v1Addr, h.addr, 3);
   v1Hdr = h.hdr;
@@ -192,9 +264,11 @@ static bool pollOnce(Heater& h) {
   if (h.failRun) { wlog(L_REPLY_BACK, h.prefix, (unsigned)h.failRun, h.rssi); h.failRun = 0; }
   if (!applyReply(h, b)) {
     wlog(L_FRAME_BAD, hex);
+    if ((b[5] & 0xF0) == 0xB0) noteAnomaly(h, b, 5);  // looks like a page of the heater but the filter refuses it
     return false;
   }
   h.pollOk++;
+  if (uint8_t why = anomalyWhy(b[5], b[6], b[7] * 2 + (b[8] >> 7))) noteAnomaly(h, b, why);
   uint32_t key = ((uint32_t)b[5] << 24) | ((uint32_t)b[6] << 16) | (uint32_t)(b[7] * 2 + (b[8] >> 7));
   if (key != h.lastKey) {
     h.lastKey = key;
